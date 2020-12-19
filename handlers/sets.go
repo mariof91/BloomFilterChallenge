@@ -37,7 +37,7 @@ func (s *Sets) PutItem( rw http.ResponseWriter, r *http.Request ){
 	filter,ok :=data.Filters[setName]
 	if !ok{
 		s.l.Println("[ERROR] set-name does not exist")
-		http.Error(rw, "Error putting Item", http.StatusBadRequest)
+		http.Error(rw, "Error putting Item -- set-name does not exist", http.StatusBadRequest)
 		return
 	}
 	filter.Add([]byte(itemName))
