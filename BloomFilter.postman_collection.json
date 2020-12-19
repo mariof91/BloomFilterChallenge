@@ -1,0 +1,106 @@
+{
+	"info": {
+		"_postman_id": "cd3ffc24-bfe4-4475-a432-5dfa89c590d2",
+		"name": "BloomFilter",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Post set-name",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"type\": \"bloom-filter\",\n    \"config\": {\n        \"size\": 256,\n\t\t\"functions\": 3\n        }\n}"
+				},
+				"url": {
+					"raw": "127.0.0.1:8080/sets/testsetname",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"sets",
+						"testsetname"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get set-name stats",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:8080/sets/testsetname/stats",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"sets",
+						"testsetname",
+						"stats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Put item-name",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:8080/sets/testsetname/kitten",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"sets",
+						"testsetname",
+						"kitten"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get item-name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:8080/sets/testsetname/items/kitten",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"sets",
+						"testsetname",
+						"items",
+						"kitten"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
